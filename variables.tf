@@ -9,7 +9,7 @@ variable "machine_type" {
 variable "zone" {
     default = "us-west1-a"
 }
-variable "network" {
+variable "network_name" {
   default = "pet-clinic-network"
 }
 variable "boot_disk_image" {

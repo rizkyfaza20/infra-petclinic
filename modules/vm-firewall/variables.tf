@@ -1,3 +1,3 @@
 variable "firewall_name" {}
 variable "instance_name" {}
-variable "network" {}
+variable "network_name" {}
