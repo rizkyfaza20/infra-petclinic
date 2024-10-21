@@ -8,6 +8,8 @@ terraform {
 }
 
 provider "google" {
+  region = "asia-southeast2"
+  credentials = "${file("/Users/ordivo077/.config/gcloud/application_default_credentials.json")}"
   zone = "asia-southeast2-a"
   project = var.project_id
 }
@@ -17,13 +19,13 @@ module "compute_instance" {
   instance_name = var.instance_name
   machine_type = var.machine_type
   zone = var.zone
-  network = var.network_name
+  network = var.network
   boot_disk_image = var.boot_disk_image
 }
 
 module "vm-firewall" {
   source = "./modules/vm-firewall"
-  network_name = var.network_name
+  network = var.network
   firewall_name = var.firewall_name
   instance_name = var.instance_name
 }

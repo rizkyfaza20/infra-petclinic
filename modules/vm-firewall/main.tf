@@ -5,9 +5,11 @@ resource "google_compute_firewall" "pet_clinic_vm_firewall" {
     protocol = "tcp"
     ports = [ "22", "80", "8080" ]
   }
-  source_tags = [ "${var.instance_name}" ]
+  target_tags = [ "${var.instance_name}" ]
+  source_ranges = [ "0.0.0.0/0" ]
 }
 
 resource "google_compute_network" "pet_clinic_network" {
-  name = var.network_name
+  name = var.network
+  auto_create_subnetworks = true
 }

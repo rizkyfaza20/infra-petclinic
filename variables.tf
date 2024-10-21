@@ -3,17 +3,20 @@ variable "instance_name" {
 }
 variable "project_id" {}
 
+variable "access_token" {
+  type = string
+}
 variable "machine_type" {
     default = "e2-micro"
 }
 variable "zone" {
     default = "us-west1-a"
 }
-variable "network_name" {
+variable "network" {
   default = "pet-clinic-network"
 }
 variable "boot_disk_image" {
-  default = "ubuntu/ubuntu-2204-jammy-v20240927"
+  default = "ubuntu-os-cloud/ubuntu-2204-jammy-v20240927"
 }
 variable "database_instance_name" {
     default = "pet-clinic-db-unit-001"
