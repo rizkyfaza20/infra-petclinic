@@ -30,6 +30,13 @@ module "vm-firewall" {
   instance_name = var.instance_name
 }
 
+module "service-account" {
+  source = "./modules/service-account"
+  region = var.region
+  account_id = var.account_id
+  project_id = var.project_id
+}
+
 
 # Optional: Database module
 # module "database" {

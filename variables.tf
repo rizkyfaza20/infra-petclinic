@@ -1,16 +1,21 @@
 variable "instance_name" {
   default = "pet-clinic-vm-unit-001"
 }
-variable "project_id" {}
-
-variable "access_token" {
-  type = string
+variable "project_id" {
+    type = string
 }
+
 variable "machine_type" {
     default = "e2-micro"
 }
 variable "zone" {
     default = "us-west1-a"
+}
+variable "region" {
+    default = "us-west1-a"
+}
+variable "account_id" {
+    default = "pet-clinic-sa"
 }
 variable "network" {
   default = "pet-clinic-network"
