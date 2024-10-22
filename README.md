@@ -8,26 +8,6 @@ This directory contains the infrastructure code for the PetClinic application. T
 2. GCP Accounts with Free tier
 
 ### Architecture Diagram
-Also, here is the flow of the architecture diagram to deploy the infrastructure using Terraform.
+Here is the flow of the architecture diagram to deploy the infrastructure using Terraform.
 
-![Architecture diagram](./assets/terraform-deployment.png)
-
-### Steps to deploy
-
-1. Try initialize the project
-
-```sh
-terraform init
-```
-
-2. And then make sure all the configuration met your expectation. Try to plan the Terraform.
-
-```sh
-terraform plan
-```
-
-3. Apply changes into the platform.
-
-```sh
-terraform apply
-```
+![Architecture diagram](./assets/deployment-flow.png)
