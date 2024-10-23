@@ -1,5 +1,8 @@
 # Steps to deploy
 
+To deploy the apps, please refer to [title](https://github.com/rizkyfaza20/spring-petclinic/)
+
+
 1.  Exec auth to the GCP for checking default application on terraform.
 
 ```sh
