@@ -21,7 +21,6 @@ resource "google_compute_instance" "pet_clinic_vm-unit" {
     sudo apt update
     sudo apt install -y wget
     sudo apt install -y docker.io
-    sudo usermod -aG docker $USER
-    wget -O docker-compose.yml https://raw.githubusercontent.com/rizkyfaza20/spring-petclinic/refs/heads/main/docker-compose.yml  
+    sudo usermod -aG docker $USER  
     EOF
 }
